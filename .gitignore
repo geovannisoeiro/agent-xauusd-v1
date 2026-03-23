@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtualenv
+venv/
+.venv/
+
+# Dados locais
+dados_xauusd.json
+logs.txt
+
+# Segredos
+config_secrets.json
+.env

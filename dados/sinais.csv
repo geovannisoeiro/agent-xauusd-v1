@@ -1,0 +1,11 @@
+data,hora_brt,sessao,direcao,canal_low,canal_high,amplitude_pts,close,rompimento_pts,lote,lucro_estimado,stop_pts
+2026-03-23 02:13:26,🟢 COMPRA
+2026-03-23 02:18:28,🔴 VENDA
+2026-03-23 02:23:29,🔴 VENDA
+2026-03-23 02:28:31,🟢 COMPRA
+2026-03-23 04:53:18,🟢 COMPRA
+2026-03-23 04:58:19,🔴 VENDA
+2026-03-23 05:03:20,🟢 COMPRA
+2026-03-23 05:08:22,🔴 VENDA
+2026-03-23 05:13:23,🔴 VENDA
+2026-03-23 05:18:24,🟢 COMPRA

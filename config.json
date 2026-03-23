@@ -1,0 +1,10 @@
+{
+  "lote": 0.01,
+  "meta": 10.0,
+  "stop": 20.0,
+  "intervalo_min": 5,
+  "canal_min": 10,
+  "canal_max": 80,
+  "telegram_token": "8656452017:AAH--Hf5dcNrhJytjSNtwdcokZpOPWxlFEw",
+  "telegram_chat_id": "1029082401"
+}
