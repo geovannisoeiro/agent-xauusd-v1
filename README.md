@@ -10,3 +10,16 @@ Bot Python que coleta preço do ouro (**XAUUSD**) a cada 1 minuto, salva histór
 ### **Terminal 1 — Coletor**
 ```bash
 python3 coletor.py
+
+### **Terminal 2 — Coletor**
+```bash
+uvicorn servidor:app --reload
+
+API + site em  http://localhost:8000 
+
+📁 Estrutura Principal
+	•	 coletor.py  — script de coleta 1x/min
+	•	 servidor.py  — API FastAPI e frontend web
+	•	 config.py  — configuração segura
+	•	 .gitignore  — mantém segredos seguros
+
