@@ -4,9 +4,13 @@ import json
 import time
 import os
 from datetime import datetime
+def carregar_segredos():
+    with open("config_secrets.json", "r") as f:
+        return json.load(f)
 
-TOKEN = "8656452017:AAH--Hf5dcNrhJytjSNtwdcokZpOPWxlFEw"
-CHAT_ID = "1029082401"
+segredos = carregar_segredos()
+TOKEN = segredos["TELEGRAM_TOKEN"]
+CHAT_ID = segredos["CHAT_ID"]
 DB_FILE = "dados_xauusd.json"
 
 def buscar_preco():
