@@ -5,7 +5,7 @@
 
 Bot Python que coleta preço do ouro (**XAUUSD**) a cada 1 minuto, salva histórico e expõe dashboard web com gráfico em tempo real.
 
-## 🚀 Como rodar (2 terminais)
+##  Como rodar (2 terminais)
 
 ### **Terminal 1 — Coletor**
 ```bash
