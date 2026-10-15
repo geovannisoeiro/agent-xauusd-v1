@@ -1,0 +1,45 @@
+<script>
+const API_BASE = 'http://127.0.0.1:8000';
+
+// Carrega config inicial
+async function carregarConfig() {
+    try {
+        const res = await fetch(`${API_BASE}/config`);
+        const config = await res.json();
+        
+        document.getElementById('lote').value = config.lote || 0.01;
+        document.getElementById('intervalo').value = config.intervalo_min || 5;
+        document.getElementById('canal_min').value = config.canal_min || 15;
+        document.getElementById('canal_max').value = config.canal_max || 50;
+        document.getElementById('status').textContent = '🟢 Conectado ao agente';
+    } catch(e) {
+        document.getElementById('status').textContent = '🔴 Servidor offline';
+    }
+}
+
+// Salva config no servidor
+async function salvarConfig() {
+    const config = {
+        lote: parseFloat(document.getElementById('lote').value),
+        intervalo_min: parseInt(document.getElementById('intervalo').value),
+        canal_min: parseFloat(document.getElementById('canal_min').value),
+        canal_max: parseFloat(document.getElementById('canal_max').value)
+    };
+    
+    try {
+        await fetch(`${API_BASE}/config`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(config)
+        });
+        document.getElementById('status').textContent = '✅ Config salva!';
+        setTimeout(carregarConfig, 1000);
+    } catch(e) {
+        alert('❌ Erro salvando: servidor offline?');
+    }
+}
+
+// Auto-refresh config a cada 30s
+setInterval(carregarConfig, 30000);
+carregarConfig();
+</script>

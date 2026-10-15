@@ -1,0 +1,8 @@
+{
+  "lote": 0.01,
+  "meta": 10.0,
+  "stop": 20.0,
+  "intervalo_min": 5,
+  "canal_min": 10,
+  "canal_max": 80
+}
